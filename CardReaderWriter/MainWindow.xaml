@@ -1,0 +1,35 @@
+﻿<Window x:Class="CardReaderWriter.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CardReaderWriter"
+        mc:Ignorable="d"
+        Title="Card Reader Writer" Height="450" Width="800">
+    <Grid>
+        <TextBlock Name="UIDTextBlock" HorizontalAlignment="Left" Margin="609,15,0,0" TextWrapping="Wrap" Text="UID" VerticalAlignment="Top" Height="21" Width="163" FontSize="16" FontWeight="Bold"/>
+        <Image HorizontalAlignment="Left" Height="75" Margin="11,8,0,0" VerticalAlignment="Top" Width="110" Source="1.PNG"/>
+        <TextBlock HorizontalAlignment="Left" Margin="131,32,0,0" TextWrapping="Wrap" Text="" Name="ReaderNameTextBlock" VerticalAlignment="Top" Width="120" FontWeight="Bold" FontSize="16" FontFamily="Segoe UI Emoji" Foreground="#FF294BF3"/>
+        <Button Content="Read card info" HorizontalAlignment="Left" Margin="468,16,0,0" VerticalAlignment="Top" Width="120" Click="Button_ReadInfo_Click" FontSize="14" FontWeight="Bold"/>
+        <Button Content="Write SERIAL NUMBER" HorizontalAlignment="Left" Height="46" Margin="11,291,0,0" VerticalAlignment="Top" Width="185" Click="Button_WriteSERIAL_NUMBER_Click" FontSize="16" FontWeight="Bold"/>
+        <TextBox Name="SERIAL_NUMBERTextBox" HorizontalAlignment="Left" Height="46" Margin="221,291,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="180" TextChanged="SERIAL_NUMBERTextBox_TextChanged" FontSize="36" FontWeight="Bold" BorderBrush="#FF1913F3" Background="White"/>
+        <Button Click="CheckReader_Click" Content="Check Reader connection" HorizontalAlignment="Left" Height="35" Margin="10,114,0,0" VerticalAlignment="Top" Width="186" FontSize="14" FontWeight="Bold"/>
+        <TextBlock Name="ReaderStatusTextBlock" HorizontalAlignment="Left" Margin="11,75,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="35" Width="260" FontSize="20" FontWeight="Bold"/>
+
+        <ScrollViewer HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto" Margin="466,50,78.309,17.655">
+            <StackPanel Orientation="Vertical" >
+                <TextBlock Text="LOG information" FontWeight="Bold" FontSize="14" />
+                <TextBlock Name="LogInfoTextBlock" Margin="3" VerticalAlignment="Stretch"
+                      TextWrapping="Wrap" TextAlignment="Justify" Width="201" FontSize="16" Foreground="Green" AllowDrop="False" FontFamily="Lucida Sans" />
+            </StackPanel>
+        </ScrollViewer>
+
+
+
+        <CheckBox Name="AutoWriteCheckBox" Content="AUTO write cards" HorizontalAlignment="Left" Margin="17,362,0,0" VerticalAlignment="Top" Checked="AutoWriteCheckBox_Checked" Unchecked="AutoWriteCheckBox_Unchecked" Height="18" Width="134" FontSize="13" FontWeight="Bold" />
+        <TextBlock Name="CardAlertTextBlock" HorizontalAlignment="Left" Margin="17,386,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="213" FontWeight="Bold"/>
+        <Button Content="Open logs folder" HorizontalAlignment="Left" Height="36" Margin="13,161,0,0" VerticalAlignment="Top" Width="183" Click="Button_Click" FontWeight="Bold" FontSize="16"/>
+        <Button Content="Clear card log" HorizontalAlignment="Left" Height="34" Margin="13,208,0,0" VerticalAlignment="Top" Width="183" FontWeight="Bold" FontSize="16" Click="Button_Click_1"/>
+
+    </Grid>
+</Window>
